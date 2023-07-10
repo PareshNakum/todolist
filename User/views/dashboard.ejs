@@ -1,0 +1,21 @@
+<h1>Welcome to User dashboard</h1>
+<table border="">
+    <thead>
+        <tr>
+            <th>Task Id</th>
+            <th>Task Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% results.forEach(function(task) { %>
+            <tr>
+                <td><%= task.id %></td>
+                <td><%= task.name %></td>
+                <td><%= task.action %></td>
+            </tr>
+        <% }); %>
+    </tbody>
+    
+</table>
+<a href="/addtask"><button>Add Task</button></a>

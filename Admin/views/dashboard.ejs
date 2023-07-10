@@ -1,0 +1,53 @@
+<h1>Welcome to Admin Dashboard</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        .admin-dashboard {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="admin-dashboard">
+        <table border="">
+            <thead>
+                <tr>
+                    <th>User Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% results.forEach(function(user) { %>
+                    <tr>
+                        <td><%= user.id %></td>
+                        <td><%= user.name %></td>
+                        <td><%= user.email %></td>
+                        <td><%= user.password %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <div>
+            <a href="/addtask"><button>Add Task</button></a>
+            <a href="/adduser"><button>Add User</button></a>
+        </div>
+    </div>
+</body>
+
+</html>
